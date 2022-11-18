@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "airtable": "^0.11.5",
     "daisyui": "^2.41.0",
     "next": "13.0.4",
     "react": "18.2.0",
