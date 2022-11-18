@@ -5,9 +5,9 @@ import Nav from '../components/Nav'
 
 export default function Home() {
   return (
-    <div>
+    <div className='h-screen'>
       <Nav />
-      <div className="w-screen h-screen font-mono flex justify-center items-center">
+      <div className="w-screen h-full font-mono flex justify-center items-center">
         <Link href="/">
           <h1 className='text-center'>Welcome</h1>
         </Link>
