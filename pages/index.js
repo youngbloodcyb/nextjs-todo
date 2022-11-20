@@ -12,9 +12,9 @@ export default function Home({initialTodos}) {
       <Nav />
       <div className="w-screen h-full font-mono flex flex-col justify-center items-center">
         <Link href="/">
-          <h1 className='text-center'>Welcome</h1>
+          <h1 className='text-center py-4'>Welcome</h1>
         </Link>
-          <ul className='flex flex-col'>
+          <ul className='flex flex-col gap-3'>
             {initialTodos.map(todo => <Todo key={todo.id} todo={todo} />)}
           </ul>
       </div>

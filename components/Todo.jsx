@@ -1,8 +1,15 @@
 export default function Todo({todo}) {
     return (
-        <li className="flex flex-row w-60 justify-between">
-            <p>{todo.fields.description}</p>
-            <input type="checkbox" name="completed" id="completed" checked={todo.fields.completed} />
+        <li className="w-72">
+            <hr className="mb-2"></hr>
+            <div className="flex flex-row justify-between">
+                <p>{todo.fields.description}</p>
+                <input 
+                    type="checkbox" 
+                    name="completed" 
+                    id="completed" 
+                    checked={todo.fields.completed} />
+            </div>
         </li>
     )
 }
