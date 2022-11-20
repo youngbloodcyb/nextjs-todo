@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Nav from '../components/Nav'
+import Todo from '../components/Todo'
 import { table, getMinifiedRecord } from './api/utils/Airtable';
 
 export default function Home({initialTodos}) {
@@ -12,6 +13,7 @@ export default function Home({initialTodos}) {
       <div className="w-screen h-full font-mono flex justify-center items-center">
         <Link href="/">
           <h1 className='text-center'>Welcome</h1>
+          {initialTodos.map(todo => <Todo key={todo.id} todo={todo} />)}
         </Link>
       </div>
     </div>
