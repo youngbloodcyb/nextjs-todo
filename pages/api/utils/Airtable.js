@@ -17,11 +17,4 @@ const getMinifiedRecord = (records) => {
     return records.map(record => minifyRecords(record));
 }
 
-export default async (req, res) => {
-    const records = await table.select({}).firstPage();
-    const minifiedRecords = getMinifiedRecord(records);
-    res.statusCode = 200;
-    res.json(minifiedRecords);
-};
-
 export { table, getMinifiedRecord, minifyRecords };
