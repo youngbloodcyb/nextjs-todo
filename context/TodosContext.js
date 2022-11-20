@@ -50,6 +50,23 @@ const TodosProvider = ({children}) => {
             console.error(err)
         }
     }
+
+    const deleteTodo = async (id) => {
+        try {
+            await fetch('api/deleteTodo', {
+                method: 'Delete',
+                body: JSON.stringify({ id }),
+                headers: { 'Content-Type': 'application/json' }
+            })
+
+            setTodos((prevTodos) => {
+                return prevTodos.filter(todo => todo.id != id);
+            });
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
     return (
         <TodosContext.Provider value={{
             todos,
