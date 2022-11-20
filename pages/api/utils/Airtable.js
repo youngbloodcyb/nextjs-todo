@@ -23,3 +23,5 @@ export default async (req, res) => {
     res.statusCode = 200;
     res.json(minifiedRecords);
 };
+
+export { table, getMinifiedRecord, minifyRecords };
