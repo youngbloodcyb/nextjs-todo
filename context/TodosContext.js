@@ -36,7 +36,7 @@ const TodosProvider = ({children}) => {
         try {
             const res = await fetch('/api/updateTodo', {
                 method: 'PUT',
-                body: JSON.stringify(updateTodo),
+                body: JSON.stringify(updatedTodo),
                 headers: {'Content-Type': 'application/json'}
             });
             await res.json();
