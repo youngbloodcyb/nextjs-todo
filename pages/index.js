@@ -17,7 +17,7 @@ export default function Home({ initialTodos }) {
   return (
     <div className='h-screen'>
       <Nav />
-      <div className="w-screen h-full font-mono flex flex-col justify-center items-center">
+      <div className="w-screen h-full font-mono flex flex-col items-center my-10">
         <Link href="/">
           <h1 className='text-center py-4'>Welcome</h1>
         </Link>
