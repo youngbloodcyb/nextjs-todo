@@ -42,8 +42,8 @@ const TodosProvider = ({children}) => {
             await res.json();
             setTodos((prevTodos) => {
                 const existingTodos = [...prevTodos];
-                const existingTodo = existingTodos.find(todo => todo.id == updateTodo.id);
-                existingTodo.fields = updateTodo.fields;
+                const existingTodo = existingTodos.find(todo => todo.id == updatedTodo.id);
+                existingTodo.fields = updatedTodo.fields;
                 return existingTodos;
             });
         } catch(err) {

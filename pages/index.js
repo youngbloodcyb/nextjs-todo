@@ -4,9 +4,16 @@ import Link from 'next/link'
 import Nav from '../components/Nav'
 import Todo from '../components/Todo'
 import { table, getMinifiedRecord } from './api/utils/Airtable';
+import { TodosContext } from '../context/TodosContext'
+import { useEffect, useContext } from 'react'
 
 export default function Home({ initialTodos }) {
-  console.log(initialTodos);
+  const {todos, setTodos} = useContext(TodosContext);
+
+  useEffect(() => {
+    setTodos(initialTodos)
+  }, [])
+
   return (
     <div className='h-screen'>
       <Nav />
@@ -15,7 +22,7 @@ export default function Home({ initialTodos }) {
           <h1 className='text-center py-4'>Welcome</h1>
         </Link>
           <ul className='flex flex-col gap-3'>
-            {initialTodos.map(todo => <Todo key={todo.id} todo={todo} />)}
+          {todos.map(todo => <Todo key={todo.id} todo={todo} />)}
           </ul>
       </div>
     </div>
