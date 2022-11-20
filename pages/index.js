@@ -5,7 +5,7 @@ import Nav from '../components/Nav'
 import Todo from '../components/Todo'
 import { table, getMinifiedRecord } from './api/utils/Airtable';
 
-export default function Home({initialTodos}) {
+export default function Home({ initialTodos }) {
   console.log(initialTodos);
   return (
     <div className='h-screen'>
