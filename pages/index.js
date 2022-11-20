@@ -10,11 +10,13 @@ export default function Home({initialTodos}) {
   return (
     <div className='h-screen'>
       <Nav />
-      <div className="w-screen h-full font-mono flex justify-center items-center">
+      <div className="w-screen h-full font-mono flex flex-col justify-center items-center">
         <Link href="/">
           <h1 className='text-center'>Welcome</h1>
-          {initialTodos.map(todo => <Todo key={todo.id} todo={todo} />)}
         </Link>
+          <ul className='flex flex-col'>
+            {initialTodos.map(todo => <Todo key={todo.id} todo={todo} />)}
+          </ul>
       </div>
     </div>
   )
