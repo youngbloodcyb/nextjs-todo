@@ -1,4 +1,5 @@
 import React from "react";
+import { useUser } from '@auth0/nextjs-auth0'
 
 export default function Nav() {
     return (
@@ -8,8 +9,8 @@ export default function Nav() {
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal p-0">
-                <li><a href="/api/logout">logout</a></li>
-                <li><a href="/api/login">login</a></li>
+                <li><a href="/api/auth/logout">logout</a></li>
+                <li><a href="/api/auth/login">login</a></li>
                 </ul>
             </div>
         </div>
